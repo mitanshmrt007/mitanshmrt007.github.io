@@ -1,10 +1,106 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>My GitHub Pages Site</title>
-  </head>
-  <body>
-    <h1>Hello world!</h1>
-    <p>Welcome to my GitHub Pages site!</p>
-  </body>
-</html>
+
+<SCRIPT LANGUAGE="javascript">
+
+Array.prototype.isInArray = function(val) {
+  var len = this.length, i = 0;
+   for (i; i < len; ++i)
+     if (this[i] == val)
+       return true;
+       return false;
+}
+      
+function str_unrot(debut, chaine, fin) {
+ var known_letters = new Array("a","b","c","d","e","f","g","h","i","j","k","l","m",
+			       "n","o","p","q","r","s","t","u","v","w","x","y","z",
+			       "1","2","3","4","5","6","7","8","9","0",
+			       "@",".","-","_",":",
+			       "A","B","C","D","E","F","G","H","I","J","K","L","M",
+			       "N","O","P","Q","R","S","T","U","V","W","X","Y","Z");
+ var count_known_letters = known_letters.length;
+ var key = (chaine.length)%count_known_letters; if ( key == 0 )  key = 26;
+ var out = "";
+ for ( var i=0; i<chaine.length; i++ ) {
+  current = chaine.charAt(i);
+  if ( known_letters.isInArray(current) ) {
+    for ( var j=0; j<count_known_letters; j++ ) {
+      if ( known_letters[j] == current ) {
+        break;
+      }
+    }
+    currentIndiceLetter = j;
+    newIndiceLetter = (currentIndiceLetter-key)%count_known_letters;
+    if ( newIndiceLetter < 0 ) {
+      newIndiceLetter += count_known_letters;
+    }
+    out += known_letters[newIndiceLetter];
+  } else {
+    out += current;
+  }
+ }
+ document.write(debut+out+fin);
+}
+</SCRIPT>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4453350-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<TITLE>Piotr Traczyk</TITLE>
+<link rel="STYLESHEET" type="text/css" href="../shared/style.css">
+<link rel="STYLESHEET" type="text/css" href="style.css">
+</HEAD>
+<body style="background-image: url(img/ph_bkg.jpg);">
+<br>
+<div class="main" style="width: 980px; margin: 0 auto;">
+<div class="box" style="width: 220px; float: left; text-align: center;">
+Choose Mode:<br>        <a href='http://www.fuw.edu.pl/~ptraczyk/mu/main.php'>Music</a> | 
+<a href='http://www.fuw.edu.pl/~ptraczyk/ph/main.php'>Physics</a> | 
+<a href='http://www.fuw.edu.pl/~ptraczyk/no/main.php'>Normal?</a></div>
+<div class="box" style="float: left; width: 600px;" align=center>
+<a href="../"><h1>Piotr Traczyk</h1></a>
+</div>
+<div class="box" style="width: 125px; float: left; text-align: center;">
+Language:<br><a href=# onclick='document.cookie="lang=0; expires=1626202969; path=/;"; window.location.reload(true);'>English</a> | <a href=# onclick='document.cookie="lang=1; expires=1626202969; path=/;"; window.location.reload(true);'>Polski</a>
+</div>
+</div>
+&nbsp;
+<div class="main" style="width: 980px; margin: 0 auto;">
+<div class="box" style="width: 782px; float: left;"><img src="img/phy.jpg" align="right" border=0>
+My name is Piotr Traczyk and I am a physicist.<br><br>A high energy experimental physicist, to be exact - meaning I deal mainly with collisions of particles accelerated to very high energies in enormous accelerators. By studying these collisions, physicists are hoping to reveal the most fundamental laws of nature.<br><br>Plus, they have loads of fun and get to travel a lot.<br><br>On these pages you will find the details of my research activities, up-to-date lists of the papers I wrote and talks I gave, and some photos from conferences, schools and the like.<br>
+
+</div><div class="box" style="width: 174px; padding: 3px; float: left;">
+<table width=190 border=0 cellpadding=0 cellspacing=0>
+<td width=20 valign=top>
+<img src="../shared/img/line.png" align="top" border=0>
+</td>
+<td width=150 valign=top>
+<img src="../shared/img/menu.png" align="top" border=0><br>
+<a href='main.php'><img src="../shared/img/menus_2x1.png"></a><br>
+
+<a href='main.php?p=research'><img src="../shared/img/menus_12x1.png"></a><br>
+<a href='main.php?p=dd&id=publications&num=0&ac=display'><img src="../shared/img/menus_13x1.png"></a><br>
+<a href='main.php?p=dd&id=presentations&num=1&ac=display'><img src="../shared/img/menus_15x1.png"></a><br>
+
+<a href='main.php?p=photo'><img src="../shared/img/menus_7x1.png"></a><br>
+<a href='main.php?p=gb'><img src="../shared/img/menus_11x1.png"></a><br>
+  <SCRIPT LANGUAGE="JavaScript">str_unrot('','<. DNAB="I.EHPKkLPN._VUGgBQShA:QhLH">','');</SCRIPT>
+  <img src="../shared/img/menus_23x1.png" border=0></a><br>
+<br>
+</td>
+</table>
+</div>
+</div>
+</BODY>
+</HTML>
